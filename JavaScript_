@@ -1,0 +1,1290 @@
+JAVASCRIPT 18:49 ||| 04-12-2022 |||15-10-2023 9:32
+0.0.0 Java is an OOP programming language, and it helps to create applications that function in a virtual machine or browser, while JavaScript is an OOP scripting language.
+       5 Scripting Languages Examples:-
+         1.JavaScript
+         2.Python (Serever side languages)
+         3.PHP (Serever side languages)
+         4.Ruby
+         5.Perl (Serever side languages)
+0.0.1 Scripting language:-A scripting language is a programming language that employs a high-level construct to interpret and execute one command at a time.
+0.0 JavaScript is so popular that it's the most used programming language in the world, used as a client-side programming language by 97.0% of all websites.
+0.Browser have its own javascript engine that run javscript code(In  chrome-V8 Engine)
+   Javascript code =>JS engine{parser(check the code line by line)=>create AST(Abstract Syntax Tree)(code represent like tree)=>convert into Machine Code=>Code Run}
+0.1.Global Execution Context is created by default before the code get start.
+    Whenever the JavaScript engine receives a script file, it first creates a default Execution Context known as the Global Execution Context (GEC) .
+    The GEC is the base/default Execution Context where all JavaScript code that is not inside of a function gets executed.
+    Execution Context will execute the code inside the function.
+    Execution Stack:-last in and first out.
+0.2.JavaScript was invented by Brendan Eich in 1995. It was developed for Netscape 2, and became the ECMA-262 standard in 1997.
+1.First website that support the javascript language is Netscape Navigator 2.0.
+2.The first name of javascript is Mocha
+3.netscape Navigator-Javascript
+  internet explorer-jscript
+3.1.Javascript is highlevel language(independent from machine).
+3.2 We also use OOPs in javascript.
+3.3.Javascript is case senstive.
+3.4.All javascript variables are identified by unique name,that unique name is called Identifiers.
+3.5.Opretor:-+,-,*,/.....etc.
+4.ECMA-262=>Standard Client side script(Which was follow by all the browsers)
+ In this way Javascript is based on ECMAScript.
+4.1. JS Engine=>Chrome=> V8 Engine
+     javascript file=>js engine me =>Parser (check error)=>AST(Abstract Syntax Tree:-An abstract syntax tree (AST) is a way of representing the syntax of a programming language as a
+      hierarchical tree-like structure. This structure is used for generating symbol tables for compilers and later code generation. )=>machine code=>run(excute).
+     
+5.There are some way to excute javascript are:-
+  a.Chrome browser
+  b.Notepad
+  c.Download sublime
+  d.In visual studio code
+  e.Javascript files
+  f.In node js 
+  g.replit.com-A Website
+6.Javascript is Dynamically typed (we the change the datatype of variable)(Change the type of variable).
+7.var-declare & update                   let:-block level element
+  let-not declare & update               var:-global level element
+  const-not declare & not update
+8.Ther are two types of datatype in JAVAScript are:-
+  1.Primitive datatype(value type hote hai):-
+  Number  typeOf->number
+  Null   typeOf->object
+  Symbol 
+  String  typeOf->string
+  Boolean  typeOf->boolean
+  Bigint
+  Undefine
+ 2.Reference Data Types or Object datatype(referance type hota hai)(always placed in {})(object referance ko store karata hai)
+   Array,Function,object...... are the objects.
+
+   Array in objects:
+   var A=[2,3,4,56,76,43];
+   console.log(A);
+console.log(A.length);
+A.pop();
+A.push("Aman");
+A.shift();      --->pahala element nikal jayega
+A.unshift("Aman")    --->Aman aa jayega suru mai
+A.sort();  --->sorting alphabetecally
+
+9.Function Expression 
+
+  let sum= function (num1,num2){
+    return num1+num2;
+  }
+ let result=sum(2,4);
+ console.log(result);
+10.Regular Expression
+   Search:-
+   var a="Aman kesharwani is a btech student studying in IPU USICT in Delhi";
+   document.write(a.search(/kesharwani/i));
+   Replace:-
+   i-modifier
+  var a="Aman kesharwani is a btech student studying in IPU USICT in Delhi";
+  document.write(a.replace(/Kesharwani/i,"singh"));
+   g-modifier
+  var a="Aman kesharwani is a btech student studying in IPU USICT in Delhi.His name is Aman Kesharwani";
+  document.write(a.replace(/Kesharwani/ig,"singh"));
+10.1.Conditional expression
+   if 
+   if and else
+11.0.Iteration:-Iteration means repetition of a process,so iterative statements are constructs that help us repeat some statementa defined no of times.
+    Do while loop
+    while loop
+    For loop
+    For each loop
+11.Iterate:-One by one items ko check karna.Array and String ko hum iterate kar shakate hai.
+  for of loop(only apply on iterable objects like array,string)
+  let prog=["Aman","Ravi","ramesh","gyan"];
+  for(item of prog){
+    console.log(item);
+  }
+
+  for(item of "prog"){
+     console.log(item);
+  }
+12.for in loop
+   let obj={
+    name:"Aman",
+    class:"Btech",
+    college:"IPU",
+   }
+   for(let a in obj){
+    console.log(a,obj[a]);
+   }
+13.prompt
+  let a=prompt("What is your name?");
+  document.write(a);
+  document.write(typeof a);  =>string
+
+14.alert
+  alert('Hello everyone');
+
+15.typecasting
+  let a="2345";
+  document.write(Number.parseInt(a));
+
+16.let:-block level element
+   var:-global level element
+17.function
+  1.function declaretion
+   function aman(x,y){
+    return (x+y)/2;
+   }
+   let a=2;
+   let b=4;
+   document.write("Averge of two number is =",aman(a,b));
+  
+  2.Arrow function
+   const amar = (x,y) =>{
+    return x+y;
+   }
+   let a=3;
+   let b=8;
+   document.write("sum of number is =",amar(a,b));
+
+  3.fuction expression
+    const square = function(x){
+         return x*x;
+    }
+
+   4.Concise arrow Function
+    const square = x=> x*x;
+18.To print ""
+   let a="This is your friend \"Aman Kesharwani\" of IPU"; 
+
+*******************************************.....................................Project...............................................................
+                                                 <h1>Welcome to Aman Restaurants</h1>
+    <ol>
+        <li>Chow Mein</li>
+        <li>Dosa</li>
+        <li>Itali</li>
+        <li>Ice cream</li>
+        <li>Eggs boil</li>
+        <li>Fruits</li>
+    </ol>
+    <h2>Enter the number in word in front of Disc</h2>
+    <input type="text"  id="choices">
+    <br>
+    <br>
+    <button onclick="disc()">Click me</button>
+
+               ................In JS file...................................
+                       function disc (){
+    var aman =document.getElementById("choices").value;
+
+
+   switch(aman){
+    case "one" :
+        document.write("Chow Mein");
+        break;
+    case "two" :
+        document.write("Dosa");
+        break;
+    case "three" :
+        document.write("Itali");
+        break;    
+        
+    default :
+        document.write("You have Enter the number not available in resturant");  
+         
+}
+
+}
+*************************************************************************************************************************************************
+19.Array
+   let name=['Aman','Ram','Shyam','Ramesh','rani','Riya'];
+   document.write(name);
+20.push:-add number at the end of array
+   pop:-remove a number from the last 
+   Shift:-remove first element
+   unshift:-To add first element
+   unshift("raju"):-add the in the beganning
+   reverse:-Reverse the Array
+   To check array-  let check =Array.isArray(friends);
+                    document.write(check);
+   concat:-add two array
+   indexOf:-To know the index
+##########********************21.Cofirmation 
+         function myfun(){
+    let userconfirmation = confirm("Do you want to leave the page");
+    if(userconfirmation == true){
+        window.open("https://www.youtube.com/");
+        return pageleavesucessfully;
+    }
+    else{
+        document.write("You are at the same page");
+        return false;
+    }
+
+    }
+22.== :- value check karega
+   === :- value ke saath saath datatype bhi check karega
+23.String
+   var name = "Aman";
+   var kaam = new String("Kesharwani");
+   document.write(typeof(name));  -->string
+   document.write(typeof(kaam));  -->object
+24.length and charAt:-
+    let first = "welcome to my channel that ios cheepord made by Aman kesharwani";
+    document.write(first.length);
+    document.write(first.charAt(8));
+25.lastIndexOf:-
+     let first = "welcome to my channel that is cheepord made by to Aman kesharwani";
+     document.write(first.lastIndexOf("to"));   --->42
+26.  Uppercase:-
+    document.write(first.toUpperCase()); 
+     Lowercase:-
+     document.write(first.toLowerCase());
+     Replace:-
+     document.write(first.replace("and","&"));
+     concat:-to add two variable
+     document.write(first.concat(second));
+27.tags:-<h1></h1>
+   elements:-<h1>Hello Friends</h1>
+   attribute:-In acker href
+   html page ko hum:-NODE kahate hai.
+28.D-Document (Whole page of code)
+   O-Object (element and attribute are object)
+   M-Modal (Tree structure of html page =>html->title,link =>{Link:-copy it:-https://www.w3schools.com/js/pic_htmltree.gif} 
+##################*********************29.Some Information
+   var newelement=document.createElement("h2");
+   newelement.textContent="Hello,I am h2 tags";
+   document.querySelector("body").appendChild(); ==>create in body tag
+30.How to access by Id 
+   <p id="first">Hello friends,Happy Diwali</p>
+
+   let a=document.getElementById("first").innerHTML;
+   document.write(a);                                            ********Element me s nahi lagega
+   
+   =>Hello friends,Happy Diwali
+31.How to access by class
+   <p class="second">Wish you many Happy returns of the day</p>
+
+    var b=document.getElementsByClassName("second")[0].innerHTML;
+    document.write(b);                                                  *******************Elements me s lagega
+  
+    =>Wish you many Happy returns of the day
+##############****************32.var p=document.querySelector("p").innerHTML;
+        document.write(p);                         ====>>>Kisi bhi element ka pahala wala print karega like, kaee sare paragraph ho
+    innerText-sirf text wala part aayega
+    innerHTML-html aur text dono aayega
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++        
+33.       //How to access children of a body
+
+        let child =document.body.children ;
+        console.log(child);
+
+        //add a new child in a body
+
+        var para=document.createElement("p");
+        var textnode=document.createTextNode("This is new para");
+        para.appendChild(textnode);
+        console.log(para);
+
+        document.body.appendChild(para);    
+         //To pickup the first and last element
+
+        var list=document.querySelector("ul");
+        console.log(list);
+
+        var copy=list.firstChild;
+        console.log(copy);
+
+        console.log(list.lastChild);
+
+        var firstsibling=first.nextElementSibling.nextElementSibling;
+        console.log(firstsibling);
+
+        console.log(list.parentNode);
+
+34.To apply CSS
+   document.getElementById('first').style.color="bl ue";
+   document.getElementById('first').setAttribute("style","color:red;background-color:blue;height:100px");
+35.Location object:-ki help se kisi bhi URL(you tube,google) ki saari information collect kar sakate hai. 
+   document.write(window.location.href);   ==>>presently jis cheez par kaam kar rahe ho uska href(head referance mil jaayega)
+
+   document.write("<br>");
+   document.write(window.location.hostname);
+   document.write("<br>");
+   document.write(window.location.pathname);
+   document.write("<br>");
+   document.write(window.location.protocol);
+   document.write("<br>");
+   document.write(window.location.port);
+36.To access the youtybe
+   function myfun(){
+    window.location.assign("https://www.youtube.com/");
+  }
+37.To print in javascript:-
+    To print all page:-
+     function divall(){
+    window.print();
+    }
+
+  To print particular part:-
+    function myfun(paravalue){
+    var backup=document.body.innerHTML;
+    var content=document.getElementById(paravalue).innerHTML;
+    document.body.innerHTML=content;
+    window.print();
+    document.body.innerHTML=backup;
+    }
+  
+38.Event is part of HTML{It is as barrier between HTML(like,it create the button) and JAVAscript(On clicking on that button what happen it was decided by javscript)}
+    Definition
+    When the page loads,it is called an event.When the user clicks a button,that click too is an event .
+    Other examples include events like pressing any key,closing a window,resizeing a window,etc.
+
+    <button onmouseleave="myfun()">Click me</button>
+
+    function myfun(){
+    document.body.style.backgroundColor="blue";
+    document.body.style.color="white";
+    }
+39.DATE
+   Full Time ke liye:-let d=new Date();
+                      document.write(d);
+  
+    Show date like this ==>>28/10/2022
+    let dateobj=new Date();
+    let month=dateobj.getUTCMonth() + 1 ;
+    let day=dateobj.getUTCDate();
+    let year=dateobj.getUTCFullYear();
+    document.write(day +"/"+month +"/"+year);
+
+    TIME(In this time you have to refresh)
+     let d=new Date();
+     let n=d.getTime();
+
+     let hour=d.getHours();
+     let mintues=d.getMinutes();
+     let second=d.getSeconds();
+
+     document.write(hour + ":" + mintues + ":" + second);
+40.For dynamic time(setInterval and clearInterval)
+    In body:-
+   <p id="times"></p>
+      
+     In script:-
+     let clocktiming=setInterval(clock,1000);
+
+     function clock(){
+     let aman=new Date().toLocaleTimeString();
+     document.getElementById('times').innerHTML=aman;
+      }
+  
+   To Stop the dynamic clock
+    <button onclick="clearInterval(clocktiming)">Click me</button>
+41.For Timeout
+     let clock=setTimeout(showalert,3000);
+
+    function showalert(){
+    alert("Hello friends my name is Aman Kesharwani");
+    }
+
+
+   To clear Timeout :-
+    <button onclick="clearInterval(clock)">Click me</button>
+42.Expression=Oprent+Opretor
+   Eval()-->>eske andar koi bhi expression dete hai toh uska wo output deta hai.
+   
+   project work using eval():-https://www.youtube.com/watch?v=y_LUaf6PM1o&t=0s&ab_channel=ThapaTechnical
+43.Some Basic Operations:-
+        document.write(Math.PI);
+        document.write("<br>");
+        document.write(Math.round(4.5595));
+        document.write("<br>");
+        document.write(Math.pow(8,2));
+        document.write("<br>");
+        document.write(Math.sqrt(5));
+        document.write("<br>");
+        document.write(Math.abs(-768));
+        document.write("<br>");
+        document.write(Math.ceil(4.3));
+        document.write("<br>");
+        document.write(Math.floor(12.8));
+        document.write("<br>");
+        document.write(Math.min(3,4,5,67,8,3,212,3,4,5,6,7,8,-9));
+        document.write("<br>");
+        document.write(Math.max(5,6,7,8,2,3,90,87,-9));
+        document.write("<br>");
+        document.write(Math.random());
+44.Print random number between 0 to 19:-
+      document.write(Math.floor(Math.random()*20));
+45.$-selector
+46.Animate :-link:-https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.compat.min.css
+     animated bounce:-
+     In script:-
+          $(document).ready(function(){
+            $(document).scroll(function(){
+                var positiontop=$(document).scrollTop();
+                console.log(positiontop);
+
+                if((positiontop>0) && (positiontop<153)){
+                  $('#card-one').addClass('animated bounceInLeft');
+                  $('#card-two').addClass('animated rubberband');
+                  $('#card-three').addClass('animated shakeX');
+                  $('#card-four').addClass('animated shakeY');
+
+                }
+
+          
+
+            });
+        });
+47.Scope Chain:-
+   f1(){
+    let a=90;
+
+       f2(){
+           f3(){
+               console.log(a);             =>90
+             }
+         }
+     }
+48.Objects in javascript
+      let first ={
+    firstname:"Aman",
+    lastname:"Kesharwani",
+    course:"B.tech",
+    branch:"ECE"
+
+}
+
+first.middlename="Kumar";
+delete first.middlename;
+console.log(first);
+    
+49.Reverse My Text Project:-
+   In body
+     <div style="text-align:center" >
+    <h1 >Here is the Mirror of hte Text</h1>
+    <input type="text" id="first" onkeyup="reverseString()" >
+    <input type="text" id="second" > 
+   </div>
+  In Script
+   function reverseString(){
+    let str=document.getElementById('first').value;
+    let newstring="";
+
+    for(var i=str.length-1; i>=0;i--){
+        newstring=newstring+str[i];
+    }
+    document.getElementById('second').value=newstring;
+    
+}
+50.onsubmit="return false";         ==>>Form jab automatic refresh hota hai tab use karte hai.
+51.Project on Welcome guest:-
+      let A=["Aman","Tiya","Riya","Ram","Shyam","Hanuman"];
+        
+        let name=prompt("What is your name?");
+        let checkname=A.includes(name);
+        if(checkname==true){
+            alert("Welcome "+name+" to the Party");
+        }
+        else{
+            alert("Sorry your are not allow");
+        }
+52.Project Fizzbuzz:-
+      let Array=[];
+        
+        
+           let i=1;
+
+           while(i<=100){
+           
+            
+            
+                if(((i%3)==0 && (i%5)==0)){
+                    Array.push("FizzBuzz");
+                    
+                }
+                else if((i%3==0)){
+                    Array.push("Fizz");
+                    
+                }else if((i%5)==0){
+                    Array.push("Buzz");
+                    
+                }
+                else{
+                    Array.push(i);
+                }
+                i++;
+                
+            }
+            console.log(Array);
+53.Primitive datatype in javascript stored in stack.
+   Reaference datatype(Array, Object, and Function) in javascript stored in heap.
+
+  Ex.of reference
+     let obj1={
+       name:aman,
+      }
+     let obj2={
+       name:aman,
+      }
+     ===>>>>obj1 === obj2   (False)   :.because two diffrent object are create in heap.
+54.function declaretion:-function sum(a,b){
+                             sum=a+b;
+                             console.log(a+b);
+                           }
+                          sum(2,3);
+    function expression:-sum(2,3);
+                            var sum=function(a,b){                ===>error(hoisting will not work)
+                             sum=a+b;
+                             console.log(a+b);
+                           }
+55."use strict":-The purpose of "use strict" is to indicate that the code should be executed in "strict mode".
+56. const first ={
+        name:"Aman",
+        qulification:"Btech",
+        add:function(){
+            var sum=2+2;
+            console.log("The sum of number"+sum);
+            console.log(this);                                   ###### this is inside the object so,in this case it will orienting toward the object first(access or refer the owner object).
+        }
+    }
+    first.add();
+57. In strict mode "this" is undefined.
+58. Regular function always refer to global function.
+
+     const first ={
+        name:"Aman",
+        qulification:"Btech",
+        add:function(){
+            var sum=2+2;
+            console.log("The sum of number"+sum);
+            console.log(this);                      ====>> refer the owner object
+            
+            function second(){
+                var third="aman";
+                console.log("My name is "+third);
+                console.log(this);                    =====>>>refer window
+    
+            };
+            second();
+        }
+    }
+    first.add();
+59.object :-array,function etc.
+         const aman ={
+        name:"ama",
+        class:"btech",
+        home:"rajgarh",
+    };
+    console.log(aman);
+    console.log(typeof([]));
+    console.log(typeof({}));
+    console.log(typeof(function () {}));
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+60.If you have to determine array among the object then we use Array.isArray(name of object,array etc);
+
+        let a=[1,2,3,4,5,6];
+    console.log(a);
+
+    const aman ={
+        name:"ama",
+        class:"btech",
+        home:"rajgarh",
+    };
+    console.log(Array.isArray(a));      ==>>true
+    console.log(Array.isArray(aman));   ==>>false
+61.Call by Value:-
+    let a=3;
+
+    let b=a;
+    b=b+5;
+    console.log(a);
+    console.log(b);
+
+  Call by Referrance:-
+     const akash={
+        name:"aman",
+        std:"btech",
+        college:"usict",
+
+    };
+    akash.name="ramesh";
+    const obj=akash;
+    console.log(akash);
+    console.log(obj);
+62.AJAX:-AJAX stands for Asynchronous JavaScript And XML.
+   * It is not programming language.
+   * Webpage => kaee jagah javascript use ho rahe hai=>kisi ek jagah change kar rahe hai toh poora webpage reload nahi hora hai.=>like facebook.
+   * It is the use of the XMLHttpRequest object to communicate with servers.
+   * Types of AJAX are:-
+     1.Asynchronous Ajax:-Asynchronous ajax call allow the next line of code to execute.
+     2.Synchronous Ajax:-Synchronous call stop javascript execution until the response from server.
+   * Disadvantages of AJAX:-It will effect on SEO,because we do not have specific url's of page.
+   * Use ofAJAX:-
+     No page reload
+     Better user experience
+     Saves network bandwith
+     Very interactive
+   * Examples of AJAX:-Facebook like and comment.
+   * Load Method:-Server par file hai aur file me content,content ko website par dikhana chahate ho by clicking a button then we have to use Load Method.   
+                        Request
+   *  Client Side ------------------->Server---|
+   (XMLHttpRequest)<------------------------|
+                           Response
+        5 steps:-
+     0.request not initialized
+     1.server connection establiised
+     2.request received
+     3.processing request
+     4.request finished and response is ready  
+   * server response some status code that is :-
+       200:"OK"
+       403:"Forbidden"
+       404:"Not Found"
+
+
+
+
+
+
+
+63.OOPS in javscript:-Class & Objects
+    * Class se Object aaya ya Object is represented by Class.
+      Ex.Ek Blueprint se bahut sare Home create kar sakate hai.
+         Car(class)=>Swift(Object)
+    * Class have two things that is 1.Properties  2.Method
+      Ex. class hello{ ----------------->class
+        message(){    ------------------->method
+            console.log("This is your friend Aman Kesharwani");
+        }
+    };
+    let a= new hello();   ----------------->object
+    a.message();
+   * Types of Methods:-
+     1.Constructor: constructor(){
+                            console.log("Hello");             ===>>constructor will automatically called only by making object.
+                     }
+       Ex.class hello{
+           constructor(){
+               console.log("Aman kesharwani");      ==> Output:Aman kesharwani
+           }
+         }
+   let a= new hello();
+     2.Prototype:message(){
+                    console.log("hello everyone");            ===>>you need object to call prototype.
+                  }  
+         Ex.class hello{
+         message(){
+          console.log("Aman kesharwani"); 
+        }
+     
+       let a= new hello();
+       a.message();
+     3.Static:static name(){
+                  console.log("Hello everyone");              ===>you do not need object to call static.
+                      }
+       Ex.class hello(){
+            static staticmethod(){
+        console.log("AK");
+       }
+      }
+    
+      hello.staticmethod();
+   * In class to set the value of any property:-
+
+      class hello{
+          constructor(){
+        this.name;
+        console.log("Aman kesharwani");
+        
+       }
+     hello(){
+        console.log(`Hello ${this.name}`);
+       }
+     }
+     let a= new hello();
+     a.name="Aman king";
+     a.hello();
+*******************+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+64.Inheritance:-Class A ke properties & methods ko Class B ke dwara use kar is said to be Inheritance.
+    Class A (Base Class) ---------------> Class B (Derived Class) ---------------> Class C (Multi-level Inheritance)
+                           Inheritance                               Inheritance
+
+*****  Ex. class fruits{
+             }
+        class vegetables extends fruits{
+             }
+      
+        let f=new fruits();    ===>It will use only properties & methods of fruits.
+        let v=new vegetables();  ===>It will use the properties & methods of fruits as well as vegetable.
+
+*****  Ex.  class employee{
+    constructor(){
+        console.log("Hello");
+    }
+}
+
+class manager extends employee{
+    constructor(){
+        super();                         ===> It is used to include the constructor of employee.
+        console.log("Aman Kesharwani");
+    }
+}
+
+let a=new manager();
+
+      
+
+ ====>>> Output= Hello Aman Kesharwani    
+
+64.1.class employee{
+    info(){
+      console.log("This is King");
+    }
+}
+
+class manager extends employee{
+  info(){
+    super.info();   ------------------>Call prototype of Base Class
+      console.log("This is aman kesharwani");
+    }
+}
+
+let a=new manager();
+a.info();
+
+64.2.
+    class employee{
+     
+    constructor(name){
+      this.empname=name;
+      console.log("This is King"+name);
+    }
+    info(){
+      console.log("Ram Ram");
+    }
+}
+
+class manager extends employee{
+  info(){
+    super.info();
+      console.log("This is aman kesharwani");
+    }
+}
+
+let a=new manager("aman");
+a.info();
+
+65.Use of class and object in this code:
+
+    class Student{
+    constructor(name,age,course){
+        this.myname=name;
+        this.myage=age;
+        this.mycourse=course;
+
+    }
+    biodata(){
+        console.log(`Hello My name is ${this.myname} and age is ${this.myage} and course is ${this.mycourse} `);
+    }
+}
+let a=new Student('Aman Kesharwani','20','Btech');
+a.biodata();
+
+66.Use of class,object and Inheritance in this code:
+                  class Student{
+    constructor(name,age,course){
+        this.myname=name;
+        this.myage=age;
+        this.mycourse=course;
+
+    }
+    biodata(){
+        console.log(`Hello My name is ${this.myname} and age is ${this.myage} and course is ${this.mycourse} `);
+    }
+
+}
+class player extends Student{
+    constructor(name,age,course,game){
+        super(name,age,course);
+        this.mygame=game;
+
+    }
+    biodata(){
+        console.log(`Hello My name is ${this.myname} and age is ${this.myage} and course is ${this.mycourse} and I am playing ${this.mygame} `);
+    }
+
+}
+let a= new player('Aman Kesharwani',20,'Btech','Badminton');
+a.biodata();
+
+67.**********Synchronous:-means ek time par ek kaam kar sakate hai.
+    Ex.const fun2 =()=>{
+    
+    console.log("Starting of fun2");
+}
+
+const fun1 =()=>{
+    console.log("This is starting fun1");
+    fun2();
+    console.log("This is ending of fun1")
+}
+fun1();
+
+*************Asynchronous:-means ek time par kaee sare kaam kar sakate hai.
+   Ex.const fun2 =()=>{
+
+    setTimeout( ()=>{                                          ====>>> setTimeout is asynchronous
+        console.log("Starting of fun2");
+
+
+    } ,3000);
+   
+}
+
+const fun1 =()=>{
+    console.log("This is starting fun1");
+    fun2();
+    console.log("This is ending of fun1")
+}
+fun1();
+
+68.Callback function:-setTimeout
+69.Not only setTimeout,same goes for DOM Manipulation,AJAX call,Client-side stroage,Video and audio APIS,Third party APIs etc.
+70.Event Loop:-It pick up the call back function from the message queue to the Execution stack.(setTimeout ke message ko WEB API me send karta hai => Message queue me => 
+   Event loop(message queue se stack me send kar deta hai).
+71.Call back:-Any function that is passed as an argument is called a callback function.
+              A callback is a function that is to be executed after another function has finished executing--hence the name 'call back'.
+              Callback are a way to make sure certain code does not execute until other code has already finished execution.
+
+      Ex.   const fun1=(address,func)=>{
+       console.log(`Hello friends meet Aman kesharwani from mirzapur king of ${address}` )
+       func();
+    }
+    const fun2=()=>{
+    console.log(`I will be back in two minutes`);
+   }
+   fun1("Rajgarh",fun2)
+
+     ====>>>Output:     Hello friends meet Aman kesharwani from mirzapur king of Rajgarh
+                        I will be back in two minutes
+72.Callback hell:-The phenomenon which happens when we nest multiple callbacks within a function is called a callback hell. The shape of the resulting code structure resembles a pyramid 
+                  and hence callback hell is also called the “pyramid of the doom”. It makes the code very difficult to understand and maintain.
+    Ex.const getroll_no=()=>{
+        setTimeout(()=>{
+            console.log("Students Biodata");
+            let roll_no=[1,2,3,4,5];
+            console.log(roll_no);
+
+            setTimeout((rollno)=>{
+                const biodata={
+                    name:"Aman Kesharwani",
+                    age:20,
+                }
+                console.log(`My name is ${biodata.name} and my age is ${biodata.age}`);
+
+                setTimeout((name)=>{
+                    biodata.gender="male";
+                    console.log(` My name is ${biodata.name} and my age is ${biodata.age} and my gender is ${biodata.gender}and my roll no is ${rollno} `);
+
+
+                },2000,biodata.name)
+                
+
+            },2000,roll_no[1])
+
+        },2000)
+    }
+    getroll_no();
+73.A Promise is a JavaScript object that links producing code and consuming code.
+    Promise => 1.resolve ->then()
+               2.reject ->catch()
+    ******* then and catch are callback function.
+
+    Demo:-let prom=new Promise(function(resolve,reject){
+          if(condition){
+                resolve();
+          else{
+                reject();
+          }
+          });
+          prom.then();  ---->resolve case
+          prom.catch();  ---->reject case
+   Ex.1.let complete=true;
+
+     let prom=new Promise(function(resolve,reject){
+      if(complete){
+        resolve("I ma successfull");
+    }
+    else{
+        reject("I am rejected");
+    }
+
+    });
+    console.log(prom);
+   Ex.1.1.function prom(complete){
+
+    return new Promise(function(resolve,reject){
+        if(complete){
+            resolve("I ma successfull");
+        }
+        else{
+            reject("I am rejected");
+        }
+    
+    });
+  }
+
+console.log(prom(true));
+  Ex.1.2.function prom(complete){
+
+    return new Promise(function(resolve,reject){
+        console.log("Condition is feching");
+        setTimeout(()=>{
+
+            if(complete){
+                resolve("I am successfull");
+            }
+            else{
+                reject("I am rejected");
+            }
+        },3000);
+    
+    });
+
+}
+
+let onfulfilment=(result)=>{
+    console.log(result);
+}
+let onrejection=(error)=>{
+    console.log(error);
+}
+prom(true).then(onfulfilment);
+prom(false).catch(onrejection);
+
+
+
+
+   Ex.2.Resolve through Promise   
+          // Excutor function ko pass
+          // promise produce
+    const pobj1=new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+            const roll_no=[1,2,3,4,5];
+            resolve(roll_no);
+        },2000);
+   });
+     // promise consume
+  pobj1.then((rollno)=>{
+    console.log(rollno);
+   });
+
+  Ex.3. Reject through Promise
+     const pobj1=new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+            const roll_no=[1,2,3,4,5];
+            reject('Error while communicating');
+        },2000);
+ });
+   // promise consume
+ pobj1.catch((error)=>{
+    console.log(error);
+ });
+
+74.JQuery:-
+***   <script>
+   $(document).ready(function(){
+   var a=$("#test").html();
+   console.log(a);
+
+ 
+       Futher jQuery Code
+  
+   });
+   </script>
+
+***  $(document).ready();
+           |         |
+ .left-> Selector   .right-> Method() 
+           |         |
+ Target DOM Element  What Work 
+
+
+***** ** * Example:- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+           
+            <body>
+    <div id="first">
+
+        <h1>Hello everyone</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa sed sunt perferendis atque? Unde iure aut ad porro qui assumenda voluptas./p>
+    </div>
+</body>
+<script>
+    $(document).ready(function(){
+        var a=$('#first').html();
+        console.log(a);
+
+    });
+</script>
+75.Async function:-The word "async" before a function means one simple thing: a function always return a promise.
+                   So the async keyword is added to functions to tell them to return a promise rather than directly returning the value.
+   code:-async function test(){
+        return("Hello World");
+    }
+    test().then((result)=>{
+        console.log(result);
+    })
+ 
+   Await function:-used inside the Async
+     code:-async function test(){
+      console.log("2:Message");
+      await console.log("3:Message");
+      console.log("4:Message");
+      console.log("5:Message");
+    }
+    console.log("1:Message");
+    test();
+    console.log("6:Message");
+ 
+ Code:- let prom=new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+            let roll_no=[1,2,3,4,5];
+            resolve(roll_no);
+            // reject('Their was an error');
+        },2000);
+
+        
+    });
+    const getBiodata=(indexdata)=>{
+        return new Promise((resolve,reject)=>{
+            setTimeout((indexdata)=>{
+                let biodata={
+                    name:"Aman",
+                    age:20,
+                }
+                resolve(`My roll no is ${indexdata} and My name is ${biodata.name} and My age is ${biodata.age} `);
+
+            },2000,indexdata)
+        });
+    }
+
+     async function getdata(){
+        const rollnodata=await prom;
+        console.log(rollnodata);
+        const data=await getBiodata(rollnodata[1]);
+        console.log(data);
+
+    }
+    getdata();
+76.Error handling:-try{} and catch(){}
+    It was used to detect the error in code.
+    
+   Code:-  let prom=new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+            let roll_no=[1,2,3,4,5];
+            resolve(roll_no);
+            // reject('Their was an error');
+        },2000);
+
+        
+    });
+    const getBiodata=(indexdata)=>{
+        return new Promise((resolve,reject)=>{
+            setTimeout((indexdata)=>{
+                let biodata={
+                    name:"Aman",
+                    age:20,
+                }
+                resolve(`My roll no is ${indexdata} and My name is ${biodata.name} and My age is ${biodata.age} `);
+
+            },2000,indexdata)
+        });
+    }
+
+  async function getdata(){
+        try{
+
+            const rollnodata=await prom;
+            console.log(rollnodata);
+            const data=await getBiodata(rollnodata[1]);
+            console.log(datjhha);
+        }catch(error){
+            console.log(error);
+        }
+
+    }
+    getdata();
+
+77.JSON:-(No lena dena with javascript )Javascript object Notation
+        Used to store data and exchange data(btw client and server).
+        Its alternative is XML but JSON is more famous then XML.
+        Syntax of JSON match with the object of the Javscript.
+
+     Diffrence btw json and xml:-
+                   JSON                                              |               XML
+      1.Javascript Object Notation                                   |    1.Extensible Markup Language
+      2.Text Based Format                                            |    2.Markup Language                                     
+      3.Light Weight                                                 |    3.Heavier
+      4.Does not support comments and                                |    4.Supports comments and namespaces
+             namespaces                                              |                                         
+      
+****  In JSON keys are in inverted comma
+      Ex.var person={"firstName":"Aman","lastName":"Kesharwani"}
+        console.log(person.firstName+""+person.lastName); 
+****  In Javscript
+       Ex.var person={firstName:"Aman",lastName:"Kesharwani"}
+        console.log(person.firstName+""+person.lastName); 
+                        OR
+        Ex.var person={"first Name":"Aman","last Name":"Kesharwani"}
+        console.log(person.firstName+""+person.lastName); 
+                        OR
+       Ex.var person={'first Name':"Aman",'last Name':"Kesharwani"}
+        console.log(person.firstName+""+person.lastName); 
+
+****  Datatype allowed in json is:-
+      String
+      Number
+      Boolean
+      Array
+      Object
+      Null
+****  Advantages of JSON:-
+      * Human Readable Format
+      * Language Independent
+      * Supports all popular Programming languages
+      * Easy to organised and access
+      * It is light weight
+**** Disadvantages of JSON:-
+     Can not use it for transfer video,audio,images or any other binary information.
+
+**** API(Application Program Interface)
+     Android App----->
+     Website(PHP)-----> API------><------MySQL
+     Iphone App------->     
+78.Fetch API:-The Fetch API provides a JavaScript interface for accessing and manipulating parts of the protocol, such as requests and responses.
+              Fetch API is used to return Promises.
+   Code:- <script>
+        fetch('https://api.covid19api.com/summary').then((apidata)=>{
+            // console.log(apidata);
+            return apidata.json();
+        }).then((actualdata)=>{
+            const mydata=(actualdata.Countries[76].Country);
+            document.write(mydata);
+        }).catch((error)=>{
+            console.log(error);
+        })
+    </script>
+
+                    OR
+     const apidatas =(indexs)=>{
+            fetch('https://api.covid19api.com/summary').then((apidata)=>{
+            // console.log(apidata);
+            return apidata.json();
+        }).then((actualdata)=>{
+            const mydata=(actualdata.Countries[`${indexs}`]);
+          console.log(mydata);
+        }).catch((error)=>{
+            console.log(error);
+        })
+
+        };
+        apidatas(76);
+       
+
+            
+
+
+Note:Strings are immutable
+Note:Exponentition ( ** )  eg.x**2 =x^2
+Note:async function harry() {
+        let delhiWeather = new Promise((resolve, reject) => {
+                setTimeout(() => {
+                        resolve("27 Deg")
+                }, 2000)
+        })
+
+        let bangaloreWeather = new Promise((resolve, reject) => {
+                setTimeout(() => {
+                        resolve("21 Deg")
+                }, 5000)
+        })
+
+        // delhiWeather.then(alert)
+        // bangaloreWeather.then(alert)
+        console.log("Fetching Delhi Weather Please wait ...")
+        let delhiW = await delhiWeather
+        console.log("Fetched Delhi Weather: " + delhiW)
+        console.log("Fetching Bangalore Weather Please wait ...")
+        let bangaloreW = await bangaloreWeather
+        console.log("Fetched Bangalore Weather: " + bangaloreW)
+        return [delhiW, bangaloreW]
+}
+
+const cherry = async () => {
+        console.log("Hey I am cherry and I am waiting ")
+}
+
+const main1 = async () => {
+        console.log("Welcome to weather control room")
+        let a = await harry()
+        let b = await cherry()
+
+}
+main1()
+
+
+
+
+Name:
+Regular expression
+   Search
+   Replace
+     i-modifier
+     g-modifier
+prompt
+trim
+indexOf
+lastIndexOf
+includes
+slice
+split
+join Method
+mutating and non-mutating
+Anonymous function
+function pass as argument
+
+
+
+
+  
+ 
+
+ 
+ 
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+
+  
