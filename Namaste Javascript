@@ -1,0 +1,473 @@
+Namaste Javascript:-
+1.Execution Context =>a.Memory(Variable Envirnment)=>Variables,Function,Key value pairs etc.
+                      b.Code(Thread of Execution) =>Code is executed one at a time.
+2.Javascript is Synchronous and Single-threaded language.=>Execution of code line by line and one command at a time.
+3.Phase 1 (Memory Creation Phase) =>Memory allocation(variable:-undefined and function as it copy from code)
+  Phase 2 (Code Execution Phase) =>Code execution(variable stored with their number and fuction invocation(function call)==>>when a function invocated a brand new execution content will 
+                                   be created.  
+                                            Phase 1:-Memory allocation:-(parameters:-undefined,variable:-undefined) 
+4.Call stack in javascript:-Global Execution Content(GEC)=> Only For manageing the All Execution content(that is creating and deleteing of execution content),Execution context kayse banta hai
+                                                        due to function  invocaion or call.=> after work Execution context deleted=> After whole execution GEC also deleted.
+                            In other word Call Stack will maintain the order of execution of the execution context.
+  
+    Call Stack also name as:-
+      1.Execution Context Stack
+      2.Program Stack
+      3.Control stack
+      4.Runtime Stack
+      5.Machine Stack
+5.Hoisting:- Hoisting is a javascript mechanism where variables and function declarations are moved to the top of their scope before the code execution.
+        aman();   ===>>>Aman Kesharwani
+        console.log(a);  ====>>>undefined
+
+        var a=12;
+
+        function aman(){
+            console.log("Aman Kesharwani");
+        }
+       
+        #### If I declare a arrow function it will work as variable.
+        1. var getname2 = function () {
+
+        }
+        2. var getname =() => {
+
+        }
+6.Window is global object created with Global Execution Content.
+  a this variable is also created pointing to Window.
+  It was the responsibility of javascript engine to create Window object.
+  At global level,        this === window =====>>>>true
+7.Global Space:-A varible in the function is not in the global space rather than that everything is in the global space.
+8.      var a=12;
+        function aman(){
+            var b=23;
+        }
+        console.log(a);     ===>>12
+        console.log(window.a);   ===>>12
+        console.log(this.a);   ===>>12
+        console.log(b);    show error 
+8.1 undefined-taking memory
+9.Lexical(in other word you can say(Hierarchy)):-Local Memory + Lexical envirnment of parent
+  Lexically means physically present in the code:-
+    function a(){
+        var b=12;
+        c();
+        function c(){                   ====>>c is lexically present inside the a
+            document.write(b);
+        }
+     }
+     a();
+  This whole chain of Lexical envirnment is called Scope Chain.
+9.1.Lexical scoping:-A function that is lexically within another function get access to the scopeof the outer function.
+9.2.Ek function dosare function ke andar jaa kar nahi dekh sakata hai.
+10.Temporal Dead Zone:-Temporal Dead Zone is the period of time during which the let and const declarations cannot be accessed(It is the time period btw the let or const variable are
+                       declare(from hoisting) until the variable asign the value. 
+    (let a) is asign a separate memory space that is Script.
+  Temporal dead zone is define as the time period btw let and const are hoisted to let and const are assign a value.
+     const Also similar to let asign a seprate memory space and come through Temporal Dead Zone and even more strict then let.
+10.0 let and const are hoisted
+******10.1.  console.log(a);                                          =======>>>>>>>>>  Uncaught ReferenceError: Cannot access 'a' before initialization because a is Temporal Dead Zone
+       let a=12;
+       var b =23;    
+
+10.1.1. console.log(x);                                           =======>>>>>>>>>  Uncaught ReferenceError: Cannot access 'a' before initialization because a is Temporal Dead Zone                     
+10.2.  let a=12;
+       let a=23;                                             =======>>>>>>>>>> Uncaught SyntaxError: Identifier 'a' has already been declared
+       console.log(a); 
+
+        let a=12;
+        var a=23;                                            =======>>>>>>>>>> Uncaught SyntaxError: Identifier 'a' has already been declared
+        console.log(a);
+
+         const a;
+          a=12;                                              ========>>>>>>>>> Uncaught SyntaxError: Missing initializer in const declaration 
+        console.log(a);                                                     
+                                                            
+        const a=13;
+        a=12;                                                ========>>>>>>>>> Uncaught TypeError: Assignment to constant variable.
+        console.log(a);
+                       7                        
+11.Block(Compound Statement):-Combine the multiple lines of javascript into a single group.Within the {}.
+          A block statement is used to group zero or more statements. The block is delimited by a pair of braces ("curly brackets") .
+   Block Scope:-We can access the variables,function within the block are said to be Block Scope.
+   Block will also follow the lexical environment.
+
+
+    {
+        var a=12;     ===>>>Global scope
+        let b=23;     ===>>>Block scope                 =====>>>>You can not access let and const outside the block that is curly bracket
+        const c=34;   ===>>>Block scope
+    }
+11.1. var a=23;
+    {
+        var a=12;
+        let b=23;                          ######Output===>>12
+        const c=34;                                         23
+        console.log(a);                                     34
+        console.log(b);                                     12
+        console.log(c);
+
+    }
+    console.log(a);
+   ******a pahale 23 hua,in block a=12 and globally ho gaya.
+
+11.2.Shadowing:-In programming, shadowing occurs when a variable declared in a certain scope (e.g. a local variable) has the same name as a variable in an outer scope 
+                (e.g. a global variable). When this happens, the outer variable is said to be shadowed by the inner variable.
+11.3. var a=23;
+    let b=78;
+    const c=90;
+    {
+        var a=12;
+        let b=23;
+        const c=34;
+        console.log(a);      ==>12
+        console.log(b);      ==>23
+        console.log(c);      ==>34
+
+    } 
+    console.log(a);        ==>12
+    console.log(b);        ==>78
+    console.log(c);        ==>90
+  
+Follow for both arrow function and normal function.
+12.Closures:-A closure is the combination of a function bundled together (enclosed) with references to its surrounding state (the lexical environment).
+  function + bundle with lexical scope = closures
+ *******closure is define as function together with its lexical envinoment
+  ****** very imp.******* closure= function + reference of lexical envirnment
+********************************************************************************
+ things you can do:
+ 1. #===>> function x(){
+        var a=function y(){
+            console.log(a);          
+        } ;
+                                                  
+        return y;                               
+
+    } 
+
+ 2.#===>> function x(){
+        var a=12;                                         
+        return y;                               
+
+    }  
+  x(function y(){
+            console.log(a);          
+        })
+3.#===>> function x(){
+        var a=7;
+       function y(){
+            console.log(a);          
+        } ;
+                                                  
+        return y;                               
+
+    } 
+**********************************************************************************
+#########best example 
+    #===>> function x(){
+        var a=12;
+        function y(){
+            console.log(a);          
+        }                                           
+        return y;                               
+
+    }                               
+    var z=x();
+    console.log(z);                            ====>>>     f y(){                // it remember the lexical envirnoment of its parents
+    z();                                                     console.log(a);
+                                                                   }
+                                                            12
+
+
+   #===>>  function z(){
+        var a=12;
+        function y(){
+            var b=23;
+            function x(){                ====>>> 12,23
+                console.log(a,b);
+            }
+            x();
+        }
+        y();
+    }
+    z();
+13.Use of Closures:-
+   - Module Design Pattern
+   - Currying
+   - Functions like once
+   - memoize
+   - maintaining state in async world
+   - setTimeouts
+   - Iterators
+   - And many more....
+14.Interview Questions:-
+
+     *** function x(){
+    for(var i=1;i<6;i++){             Output   ===>>>Hello Everyone
+                                                     6
+        setTimeout(function(){                       6
+            console.log(i);                          6
+                                                     6   
+        },i*1000);                                   6
+    }
+    console.log("Hello Everyone");
+    };
+    x();
+
+
+
+    *** function x(){
+    for(let i=1;i<6;i++){                Output   ===>>Hello Everyone        ===>>It will make closure every time or each time.
+                                                       1
+        setTimeout(function(){                         2
+            console.log(i);                            3
+                                                       4
+        },i*1000);                                     5
+    }
+    console.log("Hello Everyone");
+    };
+   x();
+
+
+   *** function x(){
+    for(var i=1;i<6;i++){
+
+        function close(x){                         Output   ===>>>Hello Everyone       ==>>Here we use var.
+                                                                   1
+            setTimeout(function(){                                 2
+                console.log(x);                                    3
+                                                                   4
+            },i*1000);                                             5
+        }
+        close(i);
+
+    }
+    console.log("Hello Everyone");
+};
+x();
+
+15.Disadvantage of colsure
+   1.it consume lot of memory
+
+
+
+
+16.What is Anonymous Function?
+   define:Function without name and does not have its own identity.
+   Anonymous function are used as value.
+   
+   function (){
+    console.log("Aman");       Give Syntax Error because function without name is not allowed.
+   }
+but
+
+var b = function(){
+            console.log("Aman");
+         }
+
+17.What is First Class Function or First Class Citizens?
+   When you are sending function at the place of function argument for function.
+   The ability to use function as value or used as function argument for other function or return function from other function.
+
+   1.var b=function(param1){
+    console.log(param1);
+    }                          => function act like a value
+   b(function(){
+    
+   });
+  2.var b=function(){
+     return function(){
+
+      }
+   }
+  console.log(b());
+
+ 
+ 
+18.What is function statement,function expression,function declaration?
+   Function statement or function declaration
+  	a();
+        b();
+      function a(){
+         console.log("a called");
+      }
+  Function Expression
+  var b=function(){                Error : b is not function
+    console.log("b called");
+  }
+
+**** the main diffrence btw Function statement and Function Expression is hoisting.
+19.What is Named function expression?
+   function with name assign to a value.
+
+   var b=function xyz(){
+    console.log("Aman Kesharwani");
+    }
+   b();    ----->Aman Kesharwani
+   xyz();  ------> give error
+
+19.Diffrence btw parameters and arguments
+
+   var b= function(param1,param2){
+    console.log("b called");
+    console.log(param1,param2);
+   }
+   b(1,2);   ---->1 and 2 are argument
+20.Callback function:1.Any function that is passed as an argument is called a callback function.
+                     2.A callback is a function that is to be executed after another function has finished executing-hence the name 'call back'.
+                     3.A JavaScript callback is a function which is to be executed after another function has finished execution. A more formal definition would be - Any function 
+                       that is passed as an argument to another function so that it can be executed in that other function is called as a callback function.
+                     4.Callbacks make sure that a function is not going to run before a task is completed but will run right after the task has completed. It helps us develop asynchronous 
+                       JavaScript code and keeps us safe from problems and errors.
+      important      5.Callback function is also a first class function going by this definition because it is also passed as an argument. But Callback functions are used to specifically 
+                       handle asynchronous tasks in a synchronous single threaded language like JavaScript
+
+******  Callback is a function which is to be executed after another function has finished execution.
+
+function greet(name,callback){
+    console.log(`Hi ${name}`);
+    callback();
+}
+function callme(){
+    console.log(`I am Aman Kesharwani`);
+}
+greet("Aman",callme);
+  
+Event Listener:Jab bhi ek specific event hota hai, jaise ki button click, mouse move, ya key press, tab event listener is event ko "listen" karta hai aur specified function.
+Removing Event Listeners:Kabhi-kabhi humein event listener ko remove karna hota hai taaki memory leak na ho ya unwanted behavior na ho. Iske liye removeEventListener method use hota hai.
+
+function handleClick() {
+    alert('Button clicked!');
+}
+
+var button = document.getElementById('myButton');
+button.addEventListener('click', handleClick);
+
+// Remove event listener
+button.removeEventListener('click', handleClick);
+
+Garbage Collection:If we remove the EventListeners, all the variable held by closure are said to be Garbage Collection.
+
+Note Important:
+1. Function that is passed on as argument to another function is called callback function.
+2. setTimeout helps turn JS which is singlethreaded and synchronous into asynchronous.
+3. Event listeners can also invoke closures with scope.
+4. Event listeners consume a lot of memory which can potentially slow down the website therefore it is good practice to remove if it is not used.
+
+21.Event Loop:
+
+22.Promise
+1. Promise can be created using a new Promise() constructor function.
+2. This constructor function takes a callback function as argument. 
+3. The callback function has 2 arguments named 'resolve' and 'reject'. Resolve and reject are the keywords provided by JS.
+4. We can only resolve or reject a promise. Nothing else can be done.
+5. An error can also be created using new Error('error message').
+6. There is also .catch() which is used to attach a failure callback function that handles any error that pops up during the execution of promise chain.
+7. .catch only handles error of .then() that are present above it. If there is any .then() below it, catch will not handle any error for that, also that ,then will get executed no matter what.
+8. It can be useful in a way if we want to catch error for a particular portion of a chain.
+9. We can have multiple catch based on requirement and then a general catch at the end.
+10. Always remember to return a value in the promise chain for the next .then to use .
+11. If it returns a value => It will be  used as an argument in next function. If it is a promise then the next .then in the promise chain is attached to the promise returned by the current callback function.
+
+Homework:
+
+
+const cart = ['shoes', 'pants', 'kurta'];
+
+createOrder(cart)
+  .then(function(orderId) {
+    console.log(orderId);
+    return orderId;
+  })
+  .then(function(orderID) {
+    return proceedToPayment(orderID)
+  })
+  .then(function({ message, amt }) {
+    console.log(message, 'of amount:', amt);
+    return showOrderSummary(message, amt);
+  })
+  .then(function({ message, amt }) {
+    console.log('Your wallet has beed debited by:', amt);
+  })
+  .catch(function(err) {
+    console.log(err.message);
+  })
+  .then(function() {
+    console.log('No matter what happens, I will get executed');
+  });
+
+
+
+function createOrder(cart) {
+  const pr = new Promise(function(resolve, reject) {
+    // create order
+    // Validate Cart
+    // orderId
+    if (!validateCart(cart)) {
+      const err = new Error('Cart is not valid!');
+      reject(err);
+    }
+    // logic for createOrder
+    const orderId = '12345';
+    if (orderId) {
+      setTimeout(function() {
+        resolve(orderId);
+      }, 5000)
+    }
+  });
+
+  return pr;
+}
+
+function proceedToPayment(orderID) {
+  // Logic for handling payment.
+  // This function returns a promise
+  return new Promise(function(resolve, reject) {
+    // logic
+    resolve({ message: `Payment Successful for order id: ${orderID}`, amt: 2500 });
+  })
+}
+
+function showOrderSummary(paymentInfo, amt) {
+  return new Promise(function(resolve, reject) {
+    // console.log(amt);
+    if (amt >= 2000) {
+      resolve({ message: 'You have ordered items that cost ${amt} RS', amt });
+    } else {
+      reject(new Error('Please buy more for discount'));
+    }
+  })
+}
+
+function validateCart(cart) {
+  // code to validate cart.
+  return true;
+  // return false;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                     
